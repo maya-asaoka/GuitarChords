@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3217D519212124D200136AD6 /* ChordPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3217D518212124D200136AD6 /* ChordPopupViewController.swift */; };
+		3217D51B212129A800136AD6 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3217D51A212129A800136AD6 /* NotificationNameExtension.swift */; };
 		326AB451211F7CFA009789EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326AB450211F7CFA009789EB /* AppDelegate.swift */; };
 		326AB453211F7CFA009789EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326AB452211F7CFA009789EB /* ViewController.swift */; };
 		326AB456211F7CFA009789EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326AB454211F7CFA009789EB /* Main.storyboard */; };
 		326AB458211F7CFB009789EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 326AB457211F7CFB009789EB /* Assets.xcassets */; };
 		326AB45B211F7CFB009789EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326AB459211F7CFB009789EB /* LaunchScreen.storyboard */; };
+		328394072120AECF002A099F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328394062120AECF002A099F /* Song.swift */; };
+		328394092120B002002A099F /* Chords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328394082120B002002A099F /* Chords.swift */; };
+		3283940B212119F4002A099F /* AddSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283940A212119F4002A099F /* AddSongViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3217D518212124D200136AD6 /* ChordPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordPopupViewController.swift; sourceTree = "<group>"; };
+		3217D51A212129A800136AD6 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		326AB44D211F7CFA009789EB /* GuitarChords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuitarChords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		326AB450211F7CFA009789EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		326AB452211F7CFA009789EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,9 @@
 		326AB457211F7CFB009789EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		326AB45A211F7CFB009789EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		326AB45C211F7CFB009789EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		328394062120AECF002A099F /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		328394082120B002002A099F /* Chords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chords.swift; sourceTree = "<group>"; };
+		3283940A212119F4002A099F /* AddSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSongViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,11 @@
 				326AB457211F7CFB009789EB /* Assets.xcassets */,
 				326AB459211F7CFB009789EB /* LaunchScreen.storyboard */,
 				326AB45C211F7CFB009789EB /* Info.plist */,
+				328394062120AECF002A099F /* Song.swift */,
+				328394082120B002002A099F /* Chords.swift */,
+				3283940A212119F4002A099F /* AddSongViewController.swift */,
+				3217D518212124D200136AD6 /* ChordPopupViewController.swift */,
+				3217D51A212129A800136AD6 /* NotificationNameExtension.swift */,
 			);
 			path = GuitarChords;
 			sourceTree = "<group>";
@@ -135,8 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3217D51B212129A800136AD6 /* NotificationNameExtension.swift in Sources */,
+				328394072120AECF002A099F /* Song.swift in Sources */,
 				326AB453211F7CFA009789EB /* ViewController.swift in Sources */,
+				3283940B212119F4002A099F /* AddSongViewController.swift in Sources */,
+				328394092120B002002A099F /* Chords.swift in Sources */,
 				326AB451211F7CFA009789EB /* AppDelegate.swift in Sources */,
+				3217D519212124D200136AD6 /* ChordPopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
