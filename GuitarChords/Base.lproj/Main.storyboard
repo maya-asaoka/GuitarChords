@@ -55,11 +55,57 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="rs3-cB-ozs" id="vmp-4W-loS"/>
+                        <segue destination="jg4-IV-Byg" kind="show" identifier="viewSongSegue" id="i71-yf-Ye4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLR-Gm-S97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196" y="-518.59070464767615"/>
+            <point key="canvasLocation" x="-172" y="-520"/>
+        </scene>
+        <!--View Song View Controller-->
+        <scene sceneID="LqY-mZ-Ac1">
+            <objects>
+                <viewController id="jg4-IV-Byg" customClass="ViewSongViewController" customModule="GuitarChords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ybe-x7-RGY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCW-Mg-wuV">
+                                <rect key="frame" x="16" y="92" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuD-AX-06Y">
+                                <rect key="frame" x="47" y="129" width="312" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b73-FK-tJ9">
+                                <rect key="frame" x="16" y="184" width="343" height="463"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jg4-IV-Byg" id="7xi-KF-rAO"/>
+                                    <outlet property="delegate" destination="jg4-IV-Byg" id="xuX-lj-Wr3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="S31-Th-0PP"/>
+                    </view>
+                    <connections>
+                        <outlet property="artistNameText" destination="TuD-AX-06Y" id="QDe-ZG-Iam"/>
+                        <outlet property="songTitleText" destination="VCW-Mg-wuV" id="H0e-wM-9JX"/>
+                        <outlet property="tableView" destination="b73-FK-tJ9" id="fOu-lY-vLE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htP-Rv-Rot" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-172" y="246"/>
         </scene>
         <!--Add Song-->
         <scene sceneID="ckj-wA-RGS">
@@ -367,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1k-qj-ZK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104.8" y="-519.04047976011998"/>
+            <point key="canvasLocation" x="679" y="-519"/>
         </scene>
         <!--Chord Popup View Controller-->
         <scene sceneID="MSe-HM-DCe">
@@ -419,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Boo-Rx-YNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952.8" y="-518.59070464767615"/>
+            <point key="canvasLocation" x="1583" y="-520"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rfb-jf-AVh">
@@ -435,7 +481,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQ4-b1-MBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-748" y="-517"/>
+            <point key="canvasLocation" x="-1025" y="-518"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

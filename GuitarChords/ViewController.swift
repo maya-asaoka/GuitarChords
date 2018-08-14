@@ -13,9 +13,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var songs = [Song]()
-
+    var selectedIndex = Int()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(addSong), name: .addSong, object: nil)
     }
     
@@ -25,6 +27,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.reloadData()
     }
     
+    // send the selected song to viewsong to display correct song
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        performSegue(withIdentifier: "viewSongSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "viewSongSegue") {
+            let viewSongVC = segue.destination as! ViewSongViewController
+            viewSongVC.song = songs[selectedIndex]
+        }
+    }
     
     // functions for displaying array of songs
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

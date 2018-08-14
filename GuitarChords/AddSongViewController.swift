@@ -49,12 +49,13 @@ class AddSongViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(addChorus2Chord), name: .addChorus2Chord, object: nil)
     }
     
+    // adds song when add button is pressed. error is shown when song title or artist name is empty
     @IBAction func addSong(_ sender: Any) {
         if (songTitle.text!.isEmpty) {
-            // error message
+            AlertPopup.showErrorMessage(title: "Error", message: "Please enter a valid song title", vc: self)
         }
         if (artistName.text!.isEmpty) {
-            // error message
+            AlertPopup.showErrorMessage(title: "Error", message: "Please enter a valid artist name", vc: self)
         }
         else {
             let newSong = Song(title: songTitle.text!, artist: artistName.text!)

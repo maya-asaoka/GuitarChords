@@ -12,8 +12,8 @@ import Foundation
 
 struct Chords {
     
-    let majorChordsBasic = ["A", "B", "C", "D", "E", "F", "G", "A♭", "B♭", "D♭", "E♭", "F#"]
-    let minorChordsBasic = ["Am", "Bm", "Cm", "Dm", "Em", "Fm", "Gm", "A♭m", "B♭m", "D♭m", "E♭m", "F#m"]
+    let majorChordsBasic = ["A♭", "A", "B♭", "B", "C", "D♭", "D", "E♭", "E", "F", "F#", "G"]
+    let minorChordsBasic = ["A♭m", "Am", "B♭m", "Bm", "Cm", "D♭m", "Dm", "E♭m", "Em", "Fm", "F#m", "Gm"]
     
     
     let majorChords679 = ["A♭6", "A♭7", "A♭9", "A6", "A7", "A9", "B♭6", "B♭7", "B♭9", "B6", "B7", "B9", "C6", "C7", "C9", "D♭6", "D♭7", "D♭9",

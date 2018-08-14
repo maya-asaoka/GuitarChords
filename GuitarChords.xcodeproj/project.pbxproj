@@ -17,6 +17,8 @@
 		328394072120AECF002A099F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328394062120AECF002A099F /* Song.swift */; };
 		328394092120B002002A099F /* Chords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328394082120B002002A099F /* Chords.swift */; };
 		3283940B212119F4002A099F /* AddSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283940A212119F4002A099F /* AddSongViewController.swift */; };
+		32A4C8B021234EEF00BF3A01 /* AlertPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A4C8AF21234EEF00BF3A01 /* AlertPopup.swift */; };
+		32A4C8B221235D1200BF3A01 /* ViewSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A4C8B121235D1200BF3A01 /* ViewSongViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		328394062120AECF002A099F /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		328394082120B002002A099F /* Chords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chords.swift; sourceTree = "<group>"; };
 		3283940A212119F4002A099F /* AddSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSongViewController.swift; sourceTree = "<group>"; };
+		32A4C8AF21234EEF00BF3A01 /* AlertPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPopup.swift; sourceTree = "<group>"; };
+		32A4C8B121235D1200BF3A01 /* ViewSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSongViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				3283940A212119F4002A099F /* AddSongViewController.swift */,
 				3217D518212124D200136AD6 /* ChordPopupViewController.swift */,
 				3217D51A212129A800136AD6 /* NotificationNameExtension.swift */,
+				32A4C8AF21234EEF00BF3A01 /* AlertPopup.swift */,
+				32A4C8B121235D1200BF3A01 /* ViewSongViewController.swift */,
 			);
 			path = GuitarChords;
 			sourceTree = "<group>";
@@ -151,12 +157,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3217D51B212129A800136AD6 /* NotificationNameExtension.swift in Sources */,
+				32A4C8B221235D1200BF3A01 /* ViewSongViewController.swift in Sources */,
 				328394072120AECF002A099F /* Song.swift in Sources */,
 				326AB453211F7CFA009789EB /* ViewController.swift in Sources */,
 				3283940B212119F4002A099F /* AddSongViewController.swift in Sources */,
 				328394092120B002002A099F /* Chords.swift in Sources */,
 				326AB451211F7CFA009789EB /* AppDelegate.swift in Sources */,
 				3217D519212124D200136AD6 /* ChordPopupViewController.swift in Sources */,
+				32A4C8B021234EEF00BF3A01 /* AlertPopup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
