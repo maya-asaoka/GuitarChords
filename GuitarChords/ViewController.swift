@@ -6,6 +6,8 @@
 //  Copyright © 2018 Maya Asaoka. All rights reserved.
 //
 
+// shows list of songs by song title and artist name
+
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -26,6 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         NotificationCenter.default.addObserver(self, selector: #selector(deleteSong), name: .deleteSong, object: nil)
     }
     
+    
     @objc func addSong(notification: Notification) {
         let song = notification.object as! Song
         songs.append(song)
@@ -39,7 +42,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.reloadData()
     }
     
-    // send the selected song to viewsong to display correct song
+    
+    // goes to the ViewSong view when a song is selected in the tableview
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
         performSegue(withIdentifier: "viewSongSegue", sender: self)
@@ -52,7 +56,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    // functions for displaying array of songs
+    
+    // tableview functions for songs array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songs.count
     }
@@ -63,14 +68,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-
-    // get selected sorting criteria from sortbypopupVC
+    
+    
+    // methods for sorting songs
     @objc func sortBy(notification: Notification) {
         songsSortedBy = notification.object as! String
         sortSongs()
     }
     
-    // sort songs according to the "songsSortedBy" criteria
     func sortSongs() {
         if (songsSortedBy == "Sort By Artist (default)") {
             songs.sort(by: { $0.artist < $1.artist })

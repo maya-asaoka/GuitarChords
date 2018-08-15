@@ -49,7 +49,7 @@ class ViewSongViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
-    
+    // goes to ChordsView when a song section is selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         index = indexPath.row
         performSegue(withIdentifier: "showChordsSegue", sender: self)
@@ -73,6 +73,7 @@ class ViewSongViewController: UIViewController, UITableViewDelegate, UITableView
         cell.textLabel?.text = chordView[indexPath.row]
         return cell
     }
+    
     
     // add chords for each section of song (if any)
     func formatChords() {

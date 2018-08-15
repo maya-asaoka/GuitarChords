@@ -6,6 +6,8 @@
 //  Copyright © 2018 Maya Asaoka. All rights reserved.
 //
 
+// popup with pickers to select a chord to add
+
 import UIKit
 
 class ChordPopupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -30,12 +32,13 @@ class ChordPopupViewController: UIViewController, UIPickerViewDelegate, UIPicker
     var chosenChord = String()
     
     
-    // close popup
+    // close popup when cancel button pressed
     @IBAction func cancelAdd(_ sender: Any) {
         self.dismiss(animated: true)
     }
     
     @IBAction func addChord(_ sender: Any) {
+        // create chord name from the two picker titles
         chosenChord = Chords.chordPicker1[picker1.selectedRow(inComponent: 0)] + Chords.chordPicker2[picker2.selectedRow(inComponent: 0)]
         
         switch (selected) {
@@ -62,6 +65,8 @@ class ChordPopupViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     
+    
+    // picker functions
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
