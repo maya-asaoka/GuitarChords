@@ -29,6 +29,12 @@ class ChordPopupViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     var chosenChord = String()
     
+    
+    // close popup
+    @IBAction func cancelAdd(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     @IBAction func addChord(_ sender: Any) {
         chosenChord = Chords.chordPicker1[picker1.selectedRow(inComponent: 0)] + Chords.chordPicker2[picker2.selectedRow(inComponent: 0)]
         

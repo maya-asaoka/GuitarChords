@@ -12,6 +12,7 @@ class AddSongViewController: UIViewController {
     
     @IBOutlet weak var songTitle: UITextField!
     @IBOutlet weak var artistName: UITextField!
+    @IBOutlet weak var capo: UITextField!
     
     @IBOutlet weak var verseText: UILabel!
     @IBOutlet weak var preChorusText: UILabel!
@@ -59,6 +60,7 @@ class AddSongViewController: UIViewController {
         }
         else {
             let newSong = Song(title: songTitle.text!, artist: artistName.text!)
+            newSong.capo = capo.text!
             newSong.Verse = Verse
             newSong.PreChorus = PreChorus
             newSong.Chorus = Chorus

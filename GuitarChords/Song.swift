@@ -14,6 +14,7 @@ class Song {
     
     var title = String()
     var artist = String()
+    var capo = String()
     
     var Verse = [String]()
     var PreChorus = [String]()
