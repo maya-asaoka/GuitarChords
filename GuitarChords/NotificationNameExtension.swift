@@ -10,7 +10,10 @@ import Foundation
 
 extension Notification.Name {
     
+    static let sortBy = Notification.Name(rawValue: "sortBy")
+    
     static let addSong = Notification.Name(rawValue: "addSong")
+    static let deleteSong = Notification.Name(rawValue: "deleteSong")
     
     static let viewSong = Notification.Name(rawValue: "viewSong")
     

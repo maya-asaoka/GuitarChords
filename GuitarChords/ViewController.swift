@@ -15,15 +15,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var songs = [Song]()
     var selectedIndex = Int()
     
+    var songsSortedBy = "Sort By Artist (default)"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addDemoSongs()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(addSong), name: .addSong, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(sortBy), name: .sortBy, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(deleteSong), name: .deleteSong, object: nil)
     }
     
     @objc func addSong(notification: Notification) {
         let song = notification.object as! Song
         songs.append(song)
+        sortSongs()
+        tableView.reloadData()
+    }
+    
+    @objc func deleteSong(notification: Notification) {
+        let songToDelete = notification.object as! Song
+        songs = songs.filter({ $0 !== songToDelete })
         tableView.reloadData()
     }
     
@@ -50,6 +62,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = songs[indexPath.row].title + ", " + songs[indexPath.row].artist
         return cell
     }
+    
+
+    // get selected sorting criteria from sortbypopupVC
+    @objc func sortBy(notification: Notification) {
+        songsSortedBy = notification.object as! String
+        sortSongs()
+    }
+    
+    // sort songs according to the "songsSortedBy" criteria
+    func sortSongs() {
+        if (songsSortedBy == "Sort By Artist (default)") {
+            songs.sort(by: { $0.artist < $1.artist })
+        }
+        if (songsSortedBy == "Sort By Song Title") {
+            songs.sort(by: { $0.title < $1.title })
+        }
+        tableView.reloadData()
+    }
+    
     
     
     // default songs added for demo and testing
@@ -88,6 +119,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         song4.PreChorus = ["G", "Em", "C", "G", "D"]
         song4.Chorus = ["Em", "C", "G", "D"]
         songs.append(song4)
+        
+        sortSongs()
     }
 
 }

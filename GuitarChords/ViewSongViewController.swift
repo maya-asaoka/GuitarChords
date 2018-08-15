@@ -32,6 +32,24 @@ class ViewSongViewController: UIViewController, UITableViewDelegate, UITableView
         formatChords()
     }
     
+    
+    // user has selected to delete song -> show confirmation popup
+    @IBAction func deleteSong(_ sender: Any) {
+        let alert = UIAlertController(title: "Delete Song?", message: "This cannot be undone", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in self.popupHandler(alert: alert)}))
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in alert.dismiss(animated: true)}))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    // handler for if confirm yes is pressed
+    func popupHandler(alert: UIAlertController) {
+        NotificationCenter.default.post(name: .deleteSong, object: self.song)
+        alert.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         index = indexPath.row
         performSegue(withIdentifier: "showChordsSegue", sender: self)
